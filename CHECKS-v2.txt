@@ -1,0 +1,7 @@
+the-robot-pickup-line-championship checks v2 (after revision: 2-word minimum,
+terminal punctuation, no leading/trailing whitespace; fixed char count 57 -> 53)
+line: 'My warranty covers everything except falling for you.'
+node24 exit 0, node22.21.1 exit 0, outputs byte-identical
+entry.txt: 'My warranty covers everything except falling for you.', 53 bytes, no newline, 53 chars, 8 words, gate 1-200 PASS
+grader sim (Node 22.21.1, unshare -n, user 65534 nobody, cwd /, read-only entry folder, 0.165s): exit 0, output byte-identical; output dir never deleted, stale files untouched
+negative tests (copies outside the repo): embedded newline -> exit 1, no entry.txt; trailing space -> exit 1, no entry.txt; 207-char line -> exit 1, no entry.txt
